@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#124e61">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><link rel="stylesheet" href="./styles.css">
+<title>SISTEMA RH — VERSÃO2.0</title>
+</head>
+<body>
+<header class="topbar"><a href="#home" class="brand"><img src="./icon.svg" alt="RH" width="44" height="44"><span>SISTEMA RH<small>VERSÃO2.0 · simples, todo dia</small></span></a><div class="top-actions"><button id="install" class="subtle">Instalar aplicativo</button><button id="update" hidden>Atualizar</button><button id="backup" class="subtle">FAZER BACKUP</button></div></header>
+<main>
+<div class="context"><label>Empresa<select id="company-filter"><option value="">Todas as empresas</option></select></label><label>Competência<input id="month-filter" type="month" required></label><span id="backup-info" class="backup-info" role="status"></span></div>
+<div class="navigation"><button id="back" class="subtle">Voltar</button><a href="#home">Início</a><span id="pwa-status" role="status"></span></div>
+<p id="message" class="message" role="status" aria-live="polite"></p>
+<section id="content" aria-live="polite"><h1>Sua rotina de RH, mais simples.</h1><p>Carregando os registros locais…</p></section>
+<footer>Dados deste navegador, sem sincronização ou senha. Pessoas com acesso ao mesmo perfil podem ver registros e backups.</footer>
+</main>
+<dialog id="dialog"><div class="dialog-top"><h2 id="dialog-title"></h2><button id="close-dialog" class="subtle" aria-label="Fechar formulário">Fechar</button></div><div id="dialog-body"></div></dialog>
+<script type="module" src="./app.js"></script>
+</body></html>
